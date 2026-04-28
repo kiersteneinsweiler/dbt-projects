@@ -1,0 +1,46 @@
+version: 2
+
+seeds:
+  - name: draft_picks
+    description: "historical draft picks from nflverse"
+    config:
+      column_types:
+        w_av: float64
+        dr_av: float64
+        season: int64
+        round: int64
+        pick: int64
+        def_solo_tackles: int64
+        def_ints: int64
+        def_sacks: float64
+        
+    columns:
+      - name: pick
+        description: "overall pick"
+      - name: team
+        description: "team drafted to"
+
+  - name: draft_values
+    description: "value of draft picks from key industry experts, from nflverse"
+    config:
+      column_types:
+        pick: int64
+        stuart: float64
+        johnson: float64
+        hill: float64
+        otc: float64
+        pff: float64
+
+    columns:
+      - name: pick
+        description: "The pick number in the NFL draft"      
+      - name: stuart
+        description: "The value of the pick according to Football Perspective's Chase Stuart, based on the AV metric from Pro Football Reference" 
+      - name: johnson
+        description: "The value of the pick according to the original pick value chart created by then-Cowboys coach Jimmy Johnson" 
+      - name: hill
+        description: "The value of the pick according to Rich Hill"                 
+      - name: otc
+        description: "Over The Cap (Fitzgerald-Spielberger chart), based on second contracts and salary cap data as a measure of player value"
+      - name: pff
+        description: "Pro Football Focus, based on PFF Wins Above Replacement (WAR) over the first four years of a rookie contract"        
