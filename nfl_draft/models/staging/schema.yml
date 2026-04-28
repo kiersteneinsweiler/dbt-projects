@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+    - name: stg_draft_picks
+      description: "NFL draft picks"
+      columns:
+          - name: draft_pick_id
+            description: "The primary key for draft picks"
+            tests:
+                - unique
+                - not_null
+
+    - name: stg_draft_values
+      description: "NFL draft values"
+      columns:
+          - name: pick
+            description: "Draft pick trade values by pick number from multiple valuation systems."
+            tests:
+                - unique
+                - not_null
