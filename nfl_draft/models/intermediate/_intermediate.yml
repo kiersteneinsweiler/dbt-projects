@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_draft_picks_enriched
+    description: "NFL draft picks joined with draft position values"
+    columns:
+      - name: draft_pick_id
+        description: "Unique identifier for each draft pick"
+        tests:
+          - unique
+          - not_null
+
+      - name: weighted_approx_value
+        description: "Weighted approximate value (av) of draft position"
+        tests:
+          - not_null
