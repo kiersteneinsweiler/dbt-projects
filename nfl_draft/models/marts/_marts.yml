@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  # q1
+  - name: mart_team_draft_performance
+    description: "Summary of pick performance by team"
+    columns:
+      - name: team
+        description: "NFL team pick"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_picks
+        description: "Total team picks"
+        data_tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              arguments: 
+                min_value: 30
+
+  # q2
+  - name: mart_position_draft_efficiency
+    description: "Indicators for whether positions are over/underdrafted"
+    columns:
+      - name: position_group
+        description: "Player position, aggregated"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Quarterback', 'Skill offense', 'Offensive line', 'Defensive line', 'Linebacker', 'Secondary', 'Special teams', 'Other']
+
+  # q3
+  - name: mart_pick_value_vs_output
+    description: "Indicators for whether pick value predicts career success"
+    columns:
+      - name: pick
+        description: "NFL draft pick number"
+        data_tests:
+          - not_null
+
+      - name: draft_round_descrip
+        description: "Draft round"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['1st round','2nd round','3rd round','4th round','5th+ round']
+
+  # q4
+  - name: mart_round_efficiency
+    description: "Indicators for whether a draft round produces surplus value"
+    columns:
+      - name: draft_round
+        description: "Draft round number"
+        data_tests:
+          - not_null
+
+      - name: draft_round_descrip
+        description: "Draft round description"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['1st round','2nd round','3rd round','4th round','5th+ round']
+
+  #q5
+  - name: mart_position_av_by_round
+    description: "Indicators for whether positions deliver in early vs late round picks"
+    columns:
+      - name: position_group
+        description: "Player position, aggregated"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Quarterback', 'Skill offense', 'Offensive line', 'Defensive line', 'Linebacker', 'Secondary', 'Special teams', 'Other']
+
+      - name: draft_round
+        description: "Draft round number"
+        data_tests:
+          - not_null          

@@ -4,7 +4,7 @@ with source as (
 
 ),
 
-config_columns as (
+renamed as (
 
     select
         pick, 
@@ -17,4 +17,4 @@ config_columns as (
     from source
 )
 
-select * from config_columns
+select * from renamed
