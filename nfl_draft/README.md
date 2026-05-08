@@ -46,5 +46,3 @@ dbt run
 dbt test
 
 Note: profiles.yml and BigQuery credentials are required to run this project.
-
-## Key Findings (optional — can fill in after visualization)
