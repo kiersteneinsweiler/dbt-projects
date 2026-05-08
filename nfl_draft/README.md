@@ -31,12 +31,19 @@ Looker Studio
 
 ## Project Structure
 nfl_draft/
+
 ├── models/
+
 │   ├── staging/          # Cleans and renames raw source data
+
 │   ├── intermediate/     # Joins and enriches staged models
+
 │   └── marts/            # Final aggregated, analytics-ready tables
+
 ├── seeds/                # Raw CSV data loaded via dbt seed
+
 ├── tests/                # Custom singular tests
+
 └── dbt_project.yml
 
 ## How to Run
