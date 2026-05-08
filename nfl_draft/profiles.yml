@@ -1,0 +1,82 @@
+user:
+  outputs:
+    default:
+      keyfile_json:
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        client_email: dbt-user@dbt-practice-494215.iam.gserviceaccount.com
+        client_id: '113434331977800795848'
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/dbt-user%40dbt-practice-494215.iam.gserviceaccount.com
+        private_key: '-----BEGIN PRIVATE KEY-----
+
+          MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDBO2eqUqATTdn1
+
+          c4zm9gocWyuUVU2LIuQgN0Arc0p8rYQlRxGgClm+su7JxMBCQmQ0B2nMT70IsKYL
+
+          em4OpxCa6wDakuTQ5bSjB0e2/LT4fTq8QqAQFdlAky/uRPJFUtzmIJTN/2fE5Sou
+
+          5fh2wSJEv6fr065EIFr01RvrrgvcL5AoTA8fenQNAXpuA9KSjChEB83Y3qrGjUQl
+
+          Jz2pdyc9PyNnQMIwCdCS9M/ZfObbprnfkPwg4qmg65fIJvZ8BX9Sq7f/7mbXCoXL
+
+          6O7gTCDQiLa/orGzdclJL+8wy7opQqF1XgiRI8Y4GrUjqnlYGc9Cql+9Ud0Wo4Gy
+
+          se1DYAixAgMBAAECggEAFVotAP5PG776LyQo/WMR+DLvYH1iG5Y8Dt7IF50ObbNH
+
+          U060gQKvytGvLwrPo2q+c5zfmSD1DqsleAZ796DIphPClQSPJhHB+ZNd/neTgFNn
+
+          PIMguJJPftIc5WeHPXeT+xZ91vsKcpCPrh3BrE64bJAgnD+4haTtJBmR86O4ggiq
+
+          ZLd5OjiScjO3cd2I71aXLzS3OuwgSl+1KcTQBNGcRoCRvaal+LyfgbU+vvDbQZGR
+
+          EV9fYqPsz2jQObQDqXDNgM1fyFI1uBEW7DufMrfTQjtLa+7RUbwpClVtW3rpWYe0
+
+          RjF5lkGTE9fRUxAaPkvjaeC1wiycYETDco3Vn+3HGQKBgQD9Gm87eReKM0GRhtX8
+
+          69jalznSZWfpuVWLIInC3xQkalbFpgCwk8ZDHIkCGXDI8mwk13ilsSc1D8txchWf
+
+          R7uczKYNpIYgRFTOQprCJ1wsd6DyDdPOBOt6kl4pvW2m/yHexXQ+3m5vdinYDWlX
+
+          rxMvvz8qDxSek3oNRHbWuxklCQKBgQDDcY3f5XCsBcx9OoRtTFPLvXwHr6J08XNJ
+
+          PgY7x29U4oLnO2ADEWWkuFFaz+KJz4Sb5oco1INKWONlZUFdKY1kWxXJVZsUu62p
+
+          dKaMMM3FmpIHyiI8VU3u6nwKd0TArE6E4+U3w+jEBdauWYPEwnyHpsy7Ip7O7PWd
+
+          g4GFWp8YaQKBgQD5ClqqdULxS+/XZooF3Ha61xQg7oCpnCAMzk5e/atPDYcl4WpK
+
+          VI0/mcNB2pB8WPSJ564hssc2Ub1Heg7GdAmphkBZqioDc9jSPv0RzzLF2kv2AB8J
+
+          VxPwvjaC8Y4ERIQqM7Vm6uxVJjqUCNY/XdgOIirfkokiY1Az38rjDKP4KQKBgQCb
+
+          utONX8jTiRtTfVkfrf3nDejSRwRvoiR2a9GTuGnhfUtI7GqohygyhBtu/M5JeOz1
+
+          PE7eHdcvWnx2wqO+k+lx2ZIWhvu3HYRWzfgXJJwRpARP6KQ25tHeWUDVJgvGaoV2
+
+          JhDyykuiRfS1n+X61e1cOXBQfFmGEBH1nF+L3pV+YQKBgQCmh4JXfMfsN6Y+E4zV
+
+          zcvu1FJyU863EGzR5lWoDasj20uRqBEjstgllgs4fmcbvk6lkvPS/beiuoo2WtdU
+
+          NZEt1ExKBBlUNT2W6XWYzh3YK9rvpJGfMkjJUkj18ALVnMRsrCYUnl6/vX2QzdxM
+
+          IxITC3uWM5he+bC1xOsi/CQoig==
+
+          -----END PRIVATE KEY-----
+
+          '
+        private_key_id: 7a4b6f79ae0116f22510df414c0fe02e48f45dd5
+        project_id: dbt-practice-494215
+        token_uri: https://oauth2.googleapis.com/token
+        type: service_account
+      method: service-account-json
+      project: dbt-practice-494215
+      schema: dbt_keinsweiler
+      scopes:
+      - https://www.googleapis.com/auth/bigquery
+      - https://www.googleapis.com/auth/cloud-platform
+      - https://www.googleapis.com/auth/drive
+      - https://www.googleapis.com/auth/userinfo.email
+      target_name: default
+      threads: 6
+      type: bigquery
+  target: default
